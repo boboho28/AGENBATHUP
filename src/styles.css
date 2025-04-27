@@ -1,0 +1,384 @@
+/* General Styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(30, 30, 30, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2,
+h3 {
+  color: #00ff88;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 255, 136, 0.3);
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+/* Cryptocurrency Bubbles Section */
+.crypto-ticker-section {
+  margin-bottom: 40px;
+  background: rgba(40, 40, 40, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.crypto-bubbles-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin: 20px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(20, 20, 20, 0.7);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+}
+
+.crypto-bubble {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: floatBubble 8s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes floatBubble {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -55%) rotate(2deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -45%) rotate(-2deg);
+  }
+}
+
+.crypto-bubble:hover {
+  transform: translate(-50%, -50%) scale(1.1) rotate(0deg) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(0, 255, 136, 0.3);
+  z-index: 100;
+  animation: none;
+}
+
+.crypto-symbol {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #00ff88;
+}
+
+.crypto-price {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.crypto-change {
+  font-size: 0.8em;
+  padding: 3px 10px;
+  border-radius: 15px;
+  margin-top: 5px;
+}
+
+.green {
+  background-color: rgba(76, 175, 80, 0.7);
+  color: white;
+}
+
+.red {
+  background-color: rgba(244, 67, 54, 0.7);
+  color: white;
+}
+
+.loading-crypto {
+  text-align: center;
+  padding: 20px;
+  color: #00ff88;
+  font-style: italic;
+}
+
+/* Loan Form Styles */
+.loan-section {
+  background: rgba(40, 40, 40, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.loan-form {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #00ff88;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(50, 50, 50, 0.5);
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #00ff88;
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #00cc66, #00ff88);
+  color: #111;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex: 1;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 255, 136, 0.3);
+}
+
+.cancel-btn {
+  background: #666;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+  background: #555;
+  transform: translateY(-2px);
+}
+
+.success-message {
+  background: rgba(0, 255, 136, 0.1);
+  color: #00ff88;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 15px;
+  animation: fadeIn 0.5s;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+/* Loan Table Styles */
+.loan-list-section {
+  background: rgba(40, 40, 40, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.loan-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.loan-table th {
+  background: rgba(0, 100, 255, 0.2);
+  padding: 12px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  color: #00ff88;
+}
+
+.loan-table td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Row Coloring Based on Status */
+.row-pending {
+  background-color: rgba(255, 235, 59, 0.15) !important;
+  border-left: 4px solid #ffeb3b;
+}
+
+.row-approved {
+  background-color: rgba(76, 175, 80, 0.15) !important;
+  border-left: 4px solid #4caf50;
+}
+
+.row-rejected {
+  background-color: rgba(244, 67, 54, 0.15) !important;
+  border-left: 4px solid #f44336;
+}
+
+.row-paid {
+  background-color: rgba(255, 152, 0, 0.15) !important;
+  border-left: 4px solid #ff9800;
+}
+
+/* Status Select */
+.status-select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  background: rgba(50, 50, 50, 0.7);
+  color: white;
+  cursor: pointer;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  background: #3498db;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.edit-btn:hover {
+  background: #2980b9;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: translateY(-1px);
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .loan-table {
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .crypto-bubbles-container {
+    height: 400px;
+  }
+
+  .crypto-bubble {
+    width: 100px;
+    height: 100px;
+    font-size: 0.9em;
+  }
+}
